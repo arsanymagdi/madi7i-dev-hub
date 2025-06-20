@@ -1,3 +1,4 @@
+
 import { 
   Calendar, 
   MessageCircle, 
@@ -7,6 +8,7 @@ import {
   Wrench, 
   Bell
 } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 interface SidebarItem {
@@ -17,7 +19,7 @@ interface SidebarItem {
 }
 
 const sidebarItems: SidebarItem[] = [
-  { icon: LayoutDashboard, label: "Dashboard", href: "/" },
+  { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
   { icon: FolderOpen, label: "Projects", href: "/projects" },
   { icon: Users, label: "Teams", href: "/teams" },
   { icon: MessageCircle, label: "Chat", href: "/chat", badge: 3 },
@@ -28,10 +30,11 @@ const sidebarItems: SidebarItem[] = [
 
 interface DashboardSidebarProps {
   className?: string;
-  currentPath?: string;
 }
 
-const DashboardSidebar = ({ className, currentPath = "/" }: DashboardSidebarProps) => {
+const DashboardSidebar = ({ className }: DashboardSidebarProps) => {
+  const location = useLocation();
+
   return (
     <aside className={cn(
       "w-64 md:w-64 bg-sidebar border-r border-sidebar-border flex flex-col h-full",
@@ -52,11 +55,11 @@ const DashboardSidebar = ({ className, currentPath = "/" }: DashboardSidebarProp
       <nav className="flex-1 px-3 md:px-4">
         <ul className="space-y-1 md:space-y-2">
           {sidebarItems.map((item) => {
-            const isActive = currentPath === item.href;
+            const isActive = location.pathname === item.href;
             return (
               <li key={item.href}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={cn(
                     "nav-item text-sm md:text-base",
                     isActive && "active"
@@ -69,7 +72,7 @@ const DashboardSidebar = ({ className, currentPath = "/" }: DashboardSidebarProp
                       {item.badge}
                     </span>
                   )}
-                </a>
+                </Link>
               </li>
             );
           })}

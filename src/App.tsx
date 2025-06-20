@@ -7,6 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/hooks/useAuth";
 import GetStarted from "./pages/GetStarted";
 import Dashboard from "./pages/Dashboard";
+import Projects from "./pages/Projects";
+import Teams from "./pages/Teams";
+import Chat from "./pages/Chat";
+import Calendar from "./pages/Calendar";
+import DevTools from "./pages/DevTools";
+import Notifications from "./pages/Notifications";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +27,12 @@ const App = () => (
           <Routes>
             <Route path="/" element={<GetStarted />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/tools" element={<DevTools />} />
+            <Route path="/notifications" element={<Notifications />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
