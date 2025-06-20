@@ -1,17 +1,61 @@
 
-import { Bell, Plus, Settings, Search, Menu } from "lucide-react";
+import { useState } from "react";
+import { Bell, Plus, Settings, Search, Menu, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import DashboardSidebar from "./DashboardSidebar";
+import AuthModal from "./auth/AuthModal";
+import { useAuth } from "@/hooks/useAuth";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
+  const { user, userData, logout, loading } = useAuth();
+  const [authModalOpen, setAuthModalOpen] = useState(false);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 bg-dev-gradient rounded-lg flex items-center justify-center mx-auto mb-4">
+            <span className="text-white font-bold text-sm">M7</span>
+          </div>
+          <p className="text-muted-foreground">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <>
+        <div className="min-h-screen bg-background flex items-center justify-center">
+          <div className="text-center space-y-6 max-w-md mx-auto p-6">
+            <div className="w-16 h-16 bg-dev-gradient rounded-xl flex items-center justify-center mx-auto">
+              <span className="text-white font-bold text-xl">M7</span>
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-gradient mb-2">Madi7i Dev Pro</h1>
+              <p className="text-muted-foreground mb-6">
+                Welcome to your developer dashboard. Sign in to get started.
+              </p>
+            </div>
+            <Button onClick={() => setAuthModalOpen(true)} size="lg" className="w-full">
+              Get Started
+            </Button>
+          </div>
+        </div>
+        <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
+      </>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top Navigation */}
@@ -76,10 +120,42 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 <Settings className="w-4 h-4" />
               </Button>
               
-              <Avatar className="w-8 h-8">
-                <AvatarImage src="/placeholder.svg" />
-                <AvatarFallback className="bg-primary text-primary-foreground">A</AvatarFallback>
-              </Avatar>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                    <Avatar className="h-8 w-8">
+                      <AvatarImage src={userData?.photoURL} alt={userData?.displayName} />
+                      <AvatarFallback className="bg-primary text-primary-foreground">
+                        {userData?.firstName?.charAt(0)}{userData?.lastName?.charAt(0)}
+                      </AvatarFallback>
+                    </Avatar>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56" align="end" forceMount>
+                  <div className="flex items-center justify-start gap-2 p-2">
+                    <div className="flex flex-col space-y-1 leading-none">
+                      <p className="font-medium">{userData?.displayName}</p>
+                      <p className="w-[200px] truncate text-sm text-muted-foreground">
+                        {userData?.email}
+                      </p>
+                    </div>
+                  </div>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <User className="mr-2 h-4 w-4" />
+                    <span>Profile</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Settings className="mr-2 h-4 w-4" />
+                    <span>Settings</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={logout}>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    <span>Log out</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import DashboardLayout from "@/components/DashboardLayout";
 import DashboardSidebar from "@/components/DashboardSidebar";
 import ProjectWidget from "@/components/widgets/ProjectWidget";
@@ -8,6 +7,7 @@ import MetricsWidget from "@/components/widgets/MetricsWidget";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useAuth } from "@/hooks/useAuth";
 import { 
   Calendar, 
   MessageSquare, 
@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 
 const Index = () => {
+  const { userData } = useAuth();
+
   return (
     <div className="min-h-screen bg-background flex">
       {/* Desktop Sidebar */}
@@ -33,7 +35,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 md:mb-6 gap-4">
               <div>
                 <h1 className="text-2xl md:text-3xl font-bold mb-2">
-                  Welcome back, <span className="text-gradient">Arsani</span> 👋
+                  Welcome back, <span className="text-gradient">{userData?.firstName || 'Developer'}</span> 👋
                 </h1>
                 <p className="text-muted-foreground text-sm md:text-base">
                   Here's what's happening with your projects today.
