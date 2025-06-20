@@ -34,23 +34,23 @@ interface DashboardSidebarProps {
 const DashboardSidebar = ({ className, currentPath = "/" }: DashboardSidebarProps) => {
   return (
     <aside className={cn(
-      "w-64 bg-sidebar border-r border-sidebar-border flex flex-col",
+      "w-64 md:w-64 bg-sidebar border-r border-sidebar-border flex flex-col h-full",
       className
     )}>
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-purple-gradient rounded-xl flex items-center justify-center">
-            <span className="text-white font-bold">M7</span>
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-purple-gradient rounded-xl flex items-center justify-center">
+            <span className="text-white font-bold text-sm md:text-base">M7</span>
           </div>
           <div>
-            <h2 className="font-semibold text-sidebar-foreground">Madi7i Dev</h2>
+            <h2 className="font-semibold text-sidebar-foreground text-sm md:text-base">Madi7i Dev</h2>
             <p className="text-xs text-sidebar-foreground/60">Core Team</p>
           </div>
         </div>
       </div>
 
-      <nav className="flex-1 px-4">
-        <ul className="space-y-2">
+      <nav className="flex-1 px-3 md:px-4">
+        <ul className="space-y-1 md:space-y-2">
           {sidebarItems.map((item) => {
             const isActive = currentPath === item.href;
             return (
@@ -58,14 +58,14 @@ const DashboardSidebar = ({ className, currentPath = "/" }: DashboardSidebarProp
                 <a
                   href={item.href}
                   className={cn(
-                    "nav-item",
+                    "nav-item text-sm md:text-base",
                     isActive && "active"
                   )}
                 >
-                  <item.icon className="w-5 h-5" />
+                  <item.icon className="w-4 h-4 md:w-5 md:h-5" />
                   <span className="flex-1">{item.label}</span>
                   {item.badge && (
-                    <span className="bg-primary text-primary-foreground text-xs px-2 py-0.5 rounded-full">
+                    <span className="bg-primary text-primary-foreground text-xs px-1.5 md:px-2 py-0.5 rounded-full min-w-[1rem] text-center">
                       {item.badge}
                     </span>
                   )}
@@ -76,7 +76,7 @@ const DashboardSidebar = ({ className, currentPath = "/" }: DashboardSidebarProp
         </ul>
       </nav>
 
-      <div className="p-4 border-t border-sidebar-border">
+      <div className="p-3 md:p-4 border-t border-sidebar-border">
         <div className="bg-sidebar-accent rounded-lg p-3">
           <h3 className="text-sm font-medium text-sidebar-foreground mb-1">
             Pro Feature
