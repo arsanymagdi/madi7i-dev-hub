@@ -5,10 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import DashboardSidebar from "./DashboardSidebar";
-import AuthModal from "./auth/AuthModal";
 import { useAuth } from "@/hooks/useAuth";
 
 interface DashboardLayoutProps {
@@ -17,13 +16,12 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   const { user, userData, logout, loading } = useAuth();
-  const [authModalOpen, setAuthModalOpen] = useState(false);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <div className="w-8 h-8 bg-dev-gradient rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-sm">M7</span>
           </div>
           <p className="text-muted-foreground">Loading...</p>
@@ -33,27 +31,8 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   }
 
   if (!user) {
-    return (
-      <>
-        <div className="min-h-screen bg-background flex items-center justify-center">
-          <div className="text-center space-y-6 max-w-md mx-auto p-6">
-            <div className="w-16 h-16 bg-dev-gradient rounded-xl flex items-center justify-center mx-auto">
-              <span className="text-white font-bold text-xl">M7</span>
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gradient mb-2">Madi7i Dev Pro</h1>
-              <p className="text-muted-foreground mb-6">
-                Welcome to your developer dashboard. Sign in to get started.
-              </p>
-            </div>
-            <Button onClick={() => setAuthModalOpen(true)} size="lg" className="w-full">
-              Get Started
-            </Button>
-          </div>
-        </div>
-        <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
-      </>
-    );
+    window.location.href = "/";
+    return null;
   }
 
   return (
@@ -75,17 +54,16 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             </Sheet>
 
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-dev-gradient rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">M7</span>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-lg font-bold text-gradient">Madi7i Dev Pro</h1>
+                <h1 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Madi7i Dev Pro</h1>
                 <p className="text-xs text-muted-foreground">Developer Dashboard</p>
               </div>
             </div>
             
             <div className="hidden lg:flex items-center gap-1">
-              <Badge variant="secondary" className="text-xs">v2.1.0</Badge>
               <Badge variant="outline" className="text-xs text-green-500 border-green-500/20">
                 Online
               </Badge>
@@ -177,17 +155,12 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             </span>
             <span className="flex items-center gap-1 whitespace-nowrap">
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="hidden sm:inline">GitHub Synced</span>
-              <span className="sm:hidden">GitHub</span>
-            </span>
-            <span className="flex items-center gap-1 whitespace-nowrap">
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-              <span className="hidden lg:inline">Google Calendar</span>
-              <span className="lg:hidden">Calendar</span>
+              <span className="hidden sm:inline">Realtime Database</span>
+              <span className="sm:hidden">Database</span>
             </span>
           </div>
           <div className="hidden lg:block whitespace-nowrap">
-            Last updated: 2 minutes ago
+            Last updated: just now
           </div>
         </div>
       </footer>

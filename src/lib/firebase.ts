@@ -23,7 +23,18 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const database = getDatabase(app);
 export const storage = getStorage(app);
-export const analytics = getAnalytics(app);
+
+// Initialize Analytics only if supported
+let analytics = null;
+try {
+  if (typeof window !== 'undefined') {
+    analytics = getAnalytics(app);
+  }
+} catch (error) {
+  console.log('Analytics not supported in this environment');
+}
+
+export { analytics };
 
 // Initialize providers
 export const googleProvider = new GoogleAuthProvider();
