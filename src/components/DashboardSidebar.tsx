@@ -1,11 +1,10 @@
-
 import { 
   Calendar, 
-  Chat, 
-  Dashboard, 
-  Projects, 
-  Teams, 
-  Tools, 
+  MessageCircle, 
+  LayoutDashboard, 
+  FolderOpen, 
+  Users, 
+  Wrench, 
   Bell
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -18,12 +17,12 @@ interface SidebarItem {
 }
 
 const sidebarItems: SidebarItem[] = [
-  { icon: Dashboard, label: "Dashboard", href: "/" },
-  { icon: Projects, label: "Projects", href: "/projects" },
-  { icon: Teams, label: "Teams", href: "/teams" },
-  { icon: Chat, label: "Chat", href: "/chat", badge: 3 },
+  { icon: LayoutDashboard, label: "Dashboard", href: "/" },
+  { icon: FolderOpen, label: "Projects", href: "/projects" },
+  { icon: Users, label: "Teams", href: "/teams" },
+  { icon: MessageCircle, label: "Chat", href: "/chat", badge: 3 },
   { icon: Calendar, label: "Calendar", href: "/calendar" },
-  { icon: Tools, label: "Dev Tools", href: "/tools" },
+  { icon: Wrench, label: "Dev Tools", href: "/tools" },
   { icon: Bell, label: "Notifications", href: "/notifications", badge: 5 },
 ];
 
