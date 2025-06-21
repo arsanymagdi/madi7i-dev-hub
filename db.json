@@ -1,0 +1,40 @@
+{
+  "projects": {
+    "some-project-id": {
+      "name": "My Project",
+      "members": {
+        "user1_email_key": true,
+        "user2_email_key": true
+      },
+      "tasks": {
+        "taskId": {
+          "title": "Some Task",
+          "assignedTo": "user1_email_key"
+        }
+      },
+      "chat": {
+        "messageId": {
+          "text": "Hello team",
+          "sentBy": "user1_uid",
+          "timestamp": 123456789
+        }
+      }
+    }
+  },
+  "privateChats": {
+    "user1_uid__user2_uid": {
+      "messageId": {
+        "text": "Hey!",
+        "sentBy": "user1_uid",
+        "timestamp": 123456789
+      }
+    }
+  },
+  "users": {
+    "abcd1234": {
+      "uid": "abcd1234",
+      "email": "example@gmail.com",
+      "displayName": "example"
+    }
+  }
+}
