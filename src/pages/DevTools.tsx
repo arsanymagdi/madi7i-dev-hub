@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import DashboardSidebar from "@/components/DashboardSidebar";
 import DashboardLayout from "@/components/DashboardLayout";
 
 const DevTools = () => {
@@ -62,6 +63,13 @@ const DevTools = () => {
   };
 
   return (
+            <div className="min-h-screen bg-background flex">
+      {/* Sidebar */}
+      <div className="hidden md:block">
+        <DashboardSidebar />
+      </div>
+
+      <div className="flex-1 w-full md:w-auto">
     <DashboardLayout>
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -213,11 +221,11 @@ const DevTools = () => {
               </CardHeader>
               <CardContent>
                 <div className="bg-black text-green-400 p-4 rounded-lg font-mono text-sm min-h-[300px]">
-                  <div className="mb-2">Welcome to Madi7i Dev Pro Terminal</div>
+                  <div className="mb-2">Welcome to Arsani-Tech Dev Pro Terminal</div>
                   <div className="mb-2">Type 'help' for available commands</div>
                   <div className="mb-4">─────────────────────────────────────</div>
                   <div className="flex items-center">
-                    <span className="text-blue-400">user@madi7i:~$</span>
+                    <span className="text-blue-400">user@Arsani-Tech:~$</span>
                     <Input 
                       className="ml-2 bg-transparent border-none text-green-400 font-mono focus:ring-0 p-0"
                       placeholder="Enter command..."
@@ -230,6 +238,8 @@ const DevTools = () => {
         </Tabs>
       </div>
     </DashboardLayout>
+    </div>
+    </div>
   );
 };
 

@@ -87,7 +87,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Welcome to Madi7i Dev Pro</DialogTitle>
+          <DialogTitle>Welcome to Arsani-Tech Dev Pro</DialogTitle>
         </DialogHeader>
         
         <Tabs defaultValue="signin" className="w-full">

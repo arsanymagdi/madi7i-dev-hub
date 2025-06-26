@@ -1,16 +1,22 @@
-
 import { useState } from "react";
-import { Plus, Search, Filter, FolderOpen } from "lucide-react";
+import { Plus, Search, Filter, FolderOpen, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import DashboardLayout from "@/components/DashboardLayout";
+import DashboardSidebar from "@/components/DashboardSidebar";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
 
 const Projects = () => {
   const [searchQuery, setSearchQuery] = useState("");
-
-  const projects = [
+  const [showModal, setShowModal] = useState(false);
+  const [projectName, setProjectName] = useState("");
+  const [projectDesc, setProjectDesc] = useState("");
+  const [memberEmails, setMemberEmails] = useState<string[]>([]);
+  const [newEmail, setNewEmail] = useState("");
+  const [projects, setProjects] = useState<any[]>([
     {
       id: 1,
       name: "E-commerce Platform",
@@ -18,7 +24,8 @@ const Projects = () => {
       status: "In Progress",
       progress: 75,
       lastUpdated: "2 hours ago",
-      technologies: ["React", "Node.js", "MongoDB"]
+      technologies: ["React", "Node.js", "MongoDB"],
+      members: ["john@example.com", "sarah@example.com"],
     },
     {
       id: 2,
@@ -27,18 +34,10 @@ const Projects = () => {
       status: "Completed",
       progress: 100,
       lastUpdated: "1 day ago",
-      technologies: ["Express", "PostgreSQL", "JWT"]
-    },
-    {
-      id: 3,
-      name: "Data Analytics Dashboard",
-      description: "Real-time analytics dashboard with charts",
-      status: "Planning",
-      progress: 25,
-      lastUpdated: "3 days ago",
-      technologies: ["React", "D3.js", "Firebase"]
+      technologies: ["Express", "PostgreSQL", "JWT"],
+      members: ["alice@example.com"],
     }
-  ];
+  ]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -49,15 +48,55 @@ const Projects = () => {
     }
   };
 
+  const handleAddMember = () => {
+    if (newEmail.trim() && !memberEmails.includes(newEmail.trim())) {
+      setMemberEmails([...memberEmails, newEmail.trim()]);
+      setNewEmail("");
+    }
+  };
+
+  const handleRemoveMember = (email: string) => {
+    setMemberEmails(memberEmails.filter(e => e !== email));
+  };
+
+  const handleCreateProject = () => {
+    const newProject = {
+      id: Date.now(),
+      name: projectName,
+      description: projectDesc,
+      status: "Planning",
+      progress: 0,
+      lastUpdated: "just now",
+      technologies: [],
+      members: memberEmails
+    };
+    setProjects([newProject, ...projects]);
+    setShowModal(false);
+    setProjectName("");
+    setProjectDesc("");
+    setMemberEmails([]);
+  };
+
+  const filteredProjects = projects.filter(p =>
+    p.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
+        <div className="min-h-screen bg-background flex">
+      {/* Sidebar */}
+      <div className="hidden md:block">
+        <DashboardSidebar />
+      </div>
+
+      <div className="flex-1 w-full md:w-auto">
     <DashboardLayout>
-      <div className="space-y-6">
+      <div className="space-y-6 p-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Projects</h1>
             <p className="text-gray-600">Manage and track your development projects</p>
           </div>
-          <Button className="gap-2">
+          <Button className="gap-2" onClick={() => setShowModal(true)}>
             <Plus className="w-4 h-4" />
             New Project
           </Button>
@@ -80,7 +119,7 @@ const Projects = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <Card key={project.id} className="hover:shadow-lg transition-shadow cursor-pointer">
               <CardHeader className="pb-3">
                 <div className="flex items-start justify-between">
@@ -115,16 +154,72 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
-                
+
                 <p className="text-xs text-gray-500">
                   Updated {project.lastUpdated}
                 </p>
+
+                <div className="text-xs">
+                  <strong>Members:</strong> {project.members.join(", ")}
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
+
+        {/* ➕ Create Project Modal */}
+        <Dialog open={showModal} onOpenChange={setShowModal}>
+          <DialogContent className="max-w-lg">
+            <DialogHeader>
+              <DialogTitle>Create New Project</DialogTitle>
+            </DialogHeader>
+            <div className="space-y-4">
+              <Input
+                placeholder="Project name"
+                value={projectName}
+                onChange={e => setProjectName(e.target.value)}
+              />
+              <Textarea
+                placeholder="Project description"
+                value={projectDesc}
+                onChange={e => setProjectDesc(e.target.value)}
+              />
+              <div>
+                <label className="text-sm font-medium">Add Members</label>
+                <div className="flex gap-2 mt-1">
+                  <Input
+                    placeholder="Enter member email"
+                    value={newEmail}
+                    onChange={e => setNewEmail(e.target.value)}
+                  />
+                  <Button type="button" onClick={handleAddMember}>
+                    Add
+                  </Button>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {memberEmails.map(email => (
+                    <Badge key={email} className="flex items-center gap-1">
+                      {email}
+                      <X
+                        className="w-3 h-3 cursor-pointer"
+                        onClick={() => handleRemoveMember(email)}
+                      />
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div className="flex justify-end pt-2">
+                <Button onClick={handleCreateProject} disabled={!projectName.trim()}>
+                  Create Project
+                </Button>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </DashboardLayout>
+          </div>
+    </div>
   );
 };
 

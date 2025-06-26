@@ -46,7 +46,7 @@ const DashboardSidebar = ({ className }: DashboardSidebarProps) => {
             <span className="text-white font-bold text-sm md:text-base">M7</span>
           </div>
           <div>
-            <h2 className="font-semibold text-sidebar-foreground text-sm md:text-base">Madi7i Dev</h2>
+            <h2 className="font-semibold text-sidebar-foreground text-sm md:text-base">Arsani-Tech Dev</h2>
             <p className="text-xs text-sidebar-foreground/60">Core Team</p>
           </div>
         </div>
@@ -79,19 +79,6 @@ const DashboardSidebar = ({ className }: DashboardSidebarProps) => {
         </ul>
       </nav>
 
-      <div className="p-3 md:p-4 border-t border-sidebar-border">
-        <div className="bg-sidebar-accent rounded-lg p-3">
-          <h3 className="text-sm font-medium text-sidebar-foreground mb-1">
-            Pro Feature
-          </h3>
-          <p className="text-xs text-sidebar-foreground/70 mb-2">
-            Unlock AI-powered code reviews and smart task breakdown
-          </p>
-          <button className="w-full bg-primary text-primary-foreground text-xs py-2 rounded-md hover:bg-primary/90 transition-colors">
-            Upgrade Now
-          </button>
-        </div>
-      </div>
     </aside>
   );
 };

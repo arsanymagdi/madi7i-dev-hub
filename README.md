@@ -1,25 +1,3 @@
-# Welcome to your Lovable project
-
-## Project info
-
-**URL**: https://lovable.dev/projects/b641cb91-95dd-4467-a864-55e560251a75
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/b641cb91-95dd-4467-a864-55e560251a75) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
 Follow these steps:
 
 ```sh
@@ -30,7 +8,7 @@ git clone <YOUR_GIT_URL>
 cd <YOUR_PROJECT_NAME>
 
 # Step 3: Install the necessary dependencies.
-npm i
+npm iNSTALL
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
@@ -74,3 +52,23 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 
 
 admin account : admin@arsanitecheg.onmicrosoft.com
+password : Arsani123
+firebase : arsanysbook@gmail.com
+
+#firebase
+###Name : Madi7iDevPro
+##tools :
+### - 1-realtime DB
+### - 2-auth
+### - 3-hosting
+
+## 1-realtime DB
+- use for : store all user data , realtime chats , projects mangment 
+
+## 2- auth
+- use for login / sign up using 
+    1- email/password
+    2- google
+    3- github
+
+

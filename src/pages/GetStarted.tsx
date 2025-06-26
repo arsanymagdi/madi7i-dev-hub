@@ -17,15 +17,15 @@ const GetStarted = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-purple-500">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-            <span className="text-white font-bold text-2xl">M7</span>
+          <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span className="text-white font-bold text-1xl">Dev Pro</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-            Madi7i <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Dev Pro</span>
+            Arsani-Tech <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Dev Pro</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Your complete developer workspace powered by Firebase. Manage projects, track progress, and collaborate seamlessly.
@@ -97,7 +97,7 @@ const GetStarted = () => {
               <CardTitle className="text-2xl">Ready to get started?</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-blue-100 mb-6">Join thousands of developers using Madi7i Dev Pro</p>
+              <p className="text-blue-100 mb-6">Join thousands of developers using Arsani-Tech Dev Pro</p>
               <Button 
                 onClick={() => setAuthModalOpen(true)} 
                 size="lg" 

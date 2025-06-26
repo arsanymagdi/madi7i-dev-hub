@@ -1,0 +1,165 @@
+  int ENA = 9;
+  int IN1 = 8;
+  int IN2 = 7;
+
+  int ENB = 3;
+  int IN3 = 4;
+  int IN4 = 5;
+  
+  int IR1 = A0;
+  float Light1 = 0;
+
+  int IR2 = A1;
+  float Light2 = 0;
+
+  int Trig1 = A2;
+  int Echo1 = A3;
+  float Distance1 = 0;
+
+  int Trig2 = A4;
+  int Echo2 = A5;
+  float Distance2 = 0;
+
+
+void setup() 
+{
+  Serial.begin(9600);
+
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+  pinMode(IR1, INPUT);
+  pinMode(IR2, INPUT);
+
+  pinMode(Trig1, OUTPUT);
+  pinMode(Echo1, INPUT);
+
+  pinMode(Trig2, OUTPUT);
+  pinMode(Echo2, INPUT);
+}
+
+void loop() 
+{
+  Light1 = Measure_Light(IR1);
+  Light2 = Measure_Light(IR2);
+  Distance1 = Measure_Distance(Trig1, Echo1);
+  Distance2 = Measure_Distance(Trig2, Echo2);
+  
+  if (Light1 < 30 || Light2 < 30)
+  {
+    if(Distance1 <= 30)
+    {
+      Stop(100);
+      delay(100);
+      Move_Backward(100);
+      delay(500);
+      Turn_Right(100);
+      delay(500);
+      Stop(100);
+    }
+    else if (Distance1 > 30)
+    {
+      Move_Forward(100);
+    }
+  }
+
+  else if (Light1 >= 30 || Light2 >= 30)
+  {
+    Stop(100);
+    delay(100);
+    Move_Backward(100);
+    delay(500);
+    Turn_Right(100);
+    delay(500);
+    Stop(100);
+  }
+
+  Serial.println(Light1);
+  Serial.println(Light2);
+  Serial.println(Distance1);
+  Serial.println(Distance2);
+
+}
+
+float Measure_Light(int IR)
+{
+  float Light = analogRead(IR);
+  return Light;
+}
+
+float Measure_Distance(int Trig, int Echo)
+{
+  digitalWrite(Trig, LOW);
+  delayMicroseconds(2);
+  digitalWrite(Trig, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(Trig, LOW);
+  long Time = pulseIn(Echo, HIGH);
+  float Distance = (0.034 * Time) / 2;
+  return Distance;
+}
+
+
+void Move_Forward(int Speed)
+{
+  analogWrite(ENA,Speed);
+  analogWrite(ENB,Speed);
+
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,HIGH);
+
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,HIGH);
+}
+
+void Move_Backward(int Speed)
+{
+  analogWrite(ENA,Speed);
+  analogWrite(ENB,Speed);
+
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,LOW);
+
+  digitalWrite(IN3,HIGH);
+  digitalWrite(IN4,LOW);
+}
+
+void Turn_Right(int Speed)
+{
+  analogWrite(ENA,Speed);
+  analogWrite(ENB,Speed);
+
+  digitalWrite(IN1,LOW);
+  digitalWrite(IN2,HIGH);
+
+  digitalWrite(IN3,HIGH);
+  digitalWrite(IN4,LOW);
+}
+
+void Turn_Left(int Speed)
+{
+  analogWrite(ENA,Speed);
+  analogWrite(ENB,Speed);
+
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,LOW);
+
+  digitalWrite(IN3,LOW);
+  digitalWrite(IN4,HIGH);
+}
+
+void Stop(int Speed)
+{
+  analogWrite(ENA,Speed);
+  analogWrite(ENB,Speed);
+
+  digitalWrite(IN1,HIGH);
+  digitalWrite(IN2,HIGH);
+
+  digitalWrite(IN3,HIGH);
+  digitalWrite(IN4,HIGH);
+}

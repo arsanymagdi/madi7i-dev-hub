@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import DashboardLayout from "@/components/DashboardLayout";
+import DashboardSidebar from "@/components/DashboardSidebar";
+
 
 const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -93,6 +95,13 @@ const Calendar = () => {
   const todayEvents = events.filter(event => event.date === new Date().getDate());
 
   return (
+            <div className="min-h-screen bg-background flex">
+      {/* Sidebar */}
+      <div className="hidden md:block">
+        <DashboardSidebar />
+      </div>
+
+      <div className="flex-1 w-full md:w-auto">
     <DashboardLayout>
       <div className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -229,6 +238,8 @@ const Calendar = () => {
         </div>
       </div>
     </DashboardLayout>
+    </div>
+    </div>
   );
 };
 

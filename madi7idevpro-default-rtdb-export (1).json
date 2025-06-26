@@ -1,0 +1,425 @@
+{
+  "announcementChannel": {
+    "messages": {
+      "-OTJb0dJTdnZeYN4ZMcn": {
+        "sentBy": "7ZWhIjcEcrS6NjlpvwqCxHv0PNg1",
+        "text": "new thing",
+        "timestamp": 1750544930915
+      }
+    }
+  },
+  "friendRequests": {
+    "7ZWhIjcEcrS6NjlpvwqCxHv0PNg1": {
+      "xwfaFMHQoxdoZGIerAeP94JKcTB2": {
+        "email": "arstech@gmail.com",
+        "name": "ars mad"
+      }
+    }
+  },
+  "friends": {
+    "JJmmeMk7rZTVrqJdSt0VrPcNglN2": {
+      "woefWx1MfTe5jozH72FlFzQS30p2": true
+    },
+    "woefWx1MfTe5jozH72FlFzQS30p2": {
+      "JJmmeMk7rZTVrqJdSt0VrPcNglN2": true,
+      "xwfaFMHQoxdoZGIerAeP94JKcTB2": true
+    },
+    "xwfaFMHQoxdoZGIerAeP94JKcTB2": {
+      "woefWx1MfTe5jozH72FlFzQS30p2": true
+    }
+  },
+  "messageLogs": {
+    "woefWx1MfTe5jozH72FlFzQS30p2": {
+      "Sun Jun 22 2025": {
+        "privateChats": {
+          "JJmmeMk7rZTVrqJdSt0VrPcNglN2__woefWx1MfTe5jozH72FlFzQS30p2": 4,
+          "woefWx1MfTe5jozH72FlFzQS30p2__xwfaFMHQoxdoZGIerAeP94JKcTB2": 8
+        }
+      }
+    }
+  },
+  "privateChats": {
+    "JJmmeMk7rZTVrqJdSt0VrPcNglN2__woefWx1MfTe5jozH72FlFzQS30p2": {
+      "-OTJlOBpOdZkGnHWdMW5": {
+        "sentBy": "JJmmeMk7rZTVrqJdSt0VrPcNglN2",
+        "text": "hi",
+        "timestamp": 1750547648842
+      },
+      "-OTOpgK7WaI50xIHFbI_": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632661088
+      },
+      "-OTOph6xd_sxCFye9Yv-": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632664340
+      },
+      "-OTOphCxs57J4iUMHDeT": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632664724
+      },
+      "-OTOpheYes3fQls4icqV": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632666554
+      },
+      "-OTOphj0pDQpjJK4hi5n": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632666840
+      },
+      "-OTOphmaCa6wUbArypfK": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632667069
+      },
+      "-OTOphq7BJuOGlN312a0": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632667295
+      },
+      "-OTOphtkCPCYvrWV7Prg": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632667527
+      },
+      "-OTOphxAq_C28FYV9IvH": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632667746
+      },
+      "-OTOpi06pz_RE_WrAqgg": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632667998
+      },
+      "-OTOpi3nJLP_h8m_QoCk": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632668234
+      },
+      "-OTOpi7L_G-d_q8OqAyG": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632668461
+      },
+      "-OTOpiAftoeKkRSzLnMh": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632668674
+      },
+      "messages": {
+        "-OTJu5kZGnAvBCmdJ3oh": {
+          "senderName": "Arsani Magdi",
+          "senderPhotoURL": "https://lh3.googleusercontent.com/a/ACg8ocKXyp91bLpxcQkc4bHiHH9LNf78pOJ6t-9TstPxOlBUwWvjTBnR=s96-c",
+          "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+          "text": "dfs",
+          "timestamp": 1750549932567
+        },
+        "-OTJvNXQ-tGjbuu7FF9B": {
+          "senderName": "Arsani Magdi",
+          "senderPhotoURL": "https://lh3.googleusercontent.com/a/ACg8ocKXyp91bLpxcQkc4bHiHH9LNf78pOJ6t-9TstPxOlBUwWvjTBnR=s96-c",
+          "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+          "text": "vx",
+          "timestamp": 1750550267530
+        },
+        "-OTJy80Bz90pxvMyWDAd": {
+          "senderName": "Arsani Magdi",
+          "senderPhotoURL": "https://lh3.googleusercontent.com/a/ACg8ocKXyp91bLpxcQkc4bHiHH9LNf78pOJ6t-9TstPxOlBUwWvjTBnR=s96-c",
+          "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+          "text": "bnv",
+          "timestamp": 1750550990396
+        },
+        "-OTK1yFvwudyzH8Yxfcr": {
+          "senderName": "Arsani Magdi",
+          "senderPhotoURL": "https://lh3.googleusercontent.com/a/ACg8ocKXyp91bLpxcQkc4bHiHH9LNf78pOJ6t-9TstPxOlBUwWvjTBnR=s96-c",
+          "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+          "text": "vbcb",
+          "timestamp": 1750552257076
+        }
+      }
+    },
+    "user1_uid__user2_uid": {
+      "messageId": {
+        "sentBy": "user1_uid",
+        "text": "Hey!",
+        "timestamp": 123456789
+      }
+    },
+    "woefWx1MfTe5jozH72FlFzQS30p2__xwfaFMHQoxdoZGIerAeP94JKcTB2": {
+      "-OTJkAMEXN64xvQc0-Jy": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "bro",
+        "timestamp": 1750547329984
+      },
+      "-OTJkA_04javvC1kIYpI": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "bro",
+        "timestamp": 1750547330866
+      },
+      "-OTJkAwTrCqyvOUYdBvC": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "bro",
+        "timestamp": 1750547332367
+      },
+      "-OTJkBjrGF0Bnis2aw3Z": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "bro",
+        "timestamp": 1750547335656
+      },
+      "-OTO01dKC5EkAy2h3o71": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "hi",
+        "timestamp": 1750618858862
+      },
+      "-OTO4fZaOY00yJF9FVf1": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "fdb",
+        "timestamp": 1750620075093
+      },
+      "-OTOiDwNlPukP3T1H2EI": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "gfgd",
+        "timestamp": 1750630705692
+      },
+      "-OTOiEVcF7F8hF_b5CNc": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "gfgddf",
+        "timestamp": 1750630708012
+      },
+      "-OTOiEZPGk5Y-AuSZvFn": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "gfgddf",
+        "timestamp": 1750630708254
+      },
+      "-OTOletyToEmym5noXDG": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "hey",
+        "timestamp": 1750631606657
+      },
+      "-OTOpj3ynkYGj00FFo_t": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632672341
+      },
+      "-OTOpj7zgr3GMrlr6TCp": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632672598
+      },
+      "-OTOpjBS95UaqNwHcOSQ": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632672820
+      },
+      "-OTOpjEtbuWphpbliQrx": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632673040
+      },
+      "-OTOpjIMwYWbctJDDt9I": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632673262
+      },
+      "-OTOpjLn_h2idf7_x9L-": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632673482
+      },
+      "-OTOpjP7thVoKJ99WFII": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632673695
+      },
+      "-OTOpjTBodsxYvUjRBdc": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632673955
+      },
+      "-OTOpjXOJKiWdovYiGET": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "vsv",
+        "timestamp": 1750632674224
+      },
+      "-OTOqUgh3owUVwY0Q4P1": {
+        "sentBy": "woefWx1MfTe5jozH72FlFzQS30p2",
+        "text": "hrhr",
+        "timestamp": 1750632871492
+      },
+      "-OTQtZuE2v8QwE6cPEdB": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667232515
+      },
+      "-OTQt_P70sNEejgpP2LH": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667234556
+      },
+      "-OTQt_Ys5iW2ZRaRPiMo": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667235180
+      },
+      "-OTQt_k3cT84JoLZsHNd": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667235960
+      },
+      "-OTQta3YkFq0vHAS4o_R": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667237271
+      },
+      "-OTQtaK77bG-s2dGo1oI": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667238332
+      },
+      "-OTQtafEVwAbTSD8MV9e": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667239747
+      },
+      "-OTQtant4kGl1eh9fYmu": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667240301
+      },
+      "-OTQtaxwI66wynd1r6bV": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667240944
+      },
+      "-OTQtb706F82bJz_Kgbt": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667241589
+      },
+      "-OTQtbJp8W8tpqB9qmH5": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667242409
+      },
+      "-OTQtbRLNm1X4wJhRvNI": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667242890
+      },
+      "-OTQtbWHr-L9aVhtLSQ2": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667243206
+      },
+      "-OTQtbd5llsHNAxQ9_lx": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667243706
+      },
+      "-OTQtbmqDxGezFJoqgj_": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667244330
+      },
+      "-OTQtbtWxsWiFXFSTia2": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667244757
+      },
+      "-OTQtbxWgcjFwqG2TV1u": {
+        "sentBy": "xwfaFMHQoxdoZGIerAeP94JKcTB2",
+        "text": "kjk",
+        "timestamp": 1750667245013
+      }
+    }
+  },
+  "projects": {
+  "projectId123": {
+    "title": "Website Redesign",
+    "description": "Redesign the landing page and user dashboard",
+    "createdAt": "2025-06-23T09:30:00Z",
+    "createdBy": "userId1",
+
+    "users": {
+      "userId1": {
+        "name": "Arsani",
+        "role": "Owner"
+      },
+      "userId2": {
+        "name": "Ahmed",
+        "role": "Contributor"
+      }
+    },
+
+    "todos": {
+      "todoId1": {
+        "text": "Setup Tailwind",
+        "completed": false
+      },
+      "todoId2": {
+        "text": "Configure Firebase",
+        "completed": true
+      }
+    },
+
+    "notes": {
+      "noteId1": {
+        "author": "userId1",
+        "content": "Don't forget to use responsive utilities",
+        "timestamp": "2025-06-23T10:00:00Z"
+      }
+    },
+
+    "tasks": {
+      "taskId1": {
+        "title": "Navbar Component",
+        "assignedTo": "userId2",
+        "status": "in-progress"
+      },
+      "taskId2": {
+        "title": "Auth Integration",
+        "assignedTo": "userId1",
+        "status": "todo"
+      }
+    }
+  }
+},
+  "users": {
+    "44SAVegNiabjrstqxyhSWOYWH0y2": {
+      "email": "arsanymagdy904@gmail.com",
+      "name": "Arsany Magdy",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocKLbdUSwkdLdRXcEyXYu1BtvfE5tfxL7M-6G2ZcsEGZSb7c47Tr=s96-c"
+    },
+    "7ZWhIjcEcrS6NjlpvwqCxHv0PNg1": {
+      "displayName": "admin",
+      "email": "admin@arsanitecheg.onmicrosoft.com",
+      "uid": "7ZWhIjcEcrS6NjlpvwqCxHv0PNg1"
+    },
+    "JJmmeMk7rZTVrqJdSt0VrPcNglN2": {
+      "displayName": "Arsany Magdy",
+      "email": "arsanymagdy32@gmail.com",
+      "name": "Arsany Magdy",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocKdxEyCIDIFf8bSxkSK9beCDnsUIwuCLxFAlOr-4xhdWvSG2w=s96-c",
+      "uid": "JJmmeMk7rZTVrqJdSt0VrPcNglN2"
+    },
+    "abcd1234": {
+      "displayName": "example",
+      "email": "example@gmail.com",
+      "uid": "abcd1234"
+    },
+    "woefWx1MfTe5jozH72FlFzQS30p2": {
+      "email": "arsanysbook@gmail.com",
+      "name": "Arsani Magdi",
+      "photoURL": "https://lh3.googleusercontent.com/a/ACg8ocKXyp91bLpxcQkc4bHiHH9LNf78pOJ6t-9TstPxOlBUwWvjTBnR=s96-c"
+    },
+    "xwfaFMHQoxdoZGIerAeP94JKcTB2": {
+      "displayName": "ars mad",
+      "email": "arstech@gmail.com",
+      "uid": "xwfaFMHQoxdoZGIerAeP94JKcTB2"
+    }
+    
+  }
+}
